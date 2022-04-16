@@ -14,11 +14,11 @@ using System.Windows.Forms;
 
 namespace Ru.Mail.AlexBasic.GUIPasswordManager
 {
-    public partial class Form1 : Form
+    public partial class GUIPasswordForm : Form
     {
         private const string _configFileName = "data.mdf";
 
-        public Form1()
+        public GUIPasswordForm()
         {
             InitializeComponent();
 

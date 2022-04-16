@@ -1,6 +1,6 @@
 ﻿namespace Ru.Mail.AlexBasic.GUIPasswordManager
 {
-    partial class Form1
+    partial class GUIPasswordForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -53,10 +53,12 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(505, 49);
+            this.textBox1.Size = new System.Drawing.Size(518, 28);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
@@ -139,11 +141,11 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Form1
+            // GUIPasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 176);
+            this.ClientSize = new System.Drawing.Size(542, 171);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -155,7 +157,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "GUIPasswordForm";
             this.Text = "Form1";
             this.Activated += new System.EventHandler(this.Form1_Activated);
             this.ResumeLayout(false);

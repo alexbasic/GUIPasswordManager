@@ -30,50 +30,45 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.OkButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(12, 17);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.PlaceholderText = "password...";
-            this.textBox1.Size = new System.Drawing.Size(326, 23);
+            this.textBox1.Size = new System.Drawing.Size(298, 23);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.UseSystemPasswordChar = true;
             // 
             // OkButton
             // 
+            this.OkButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.OkButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.OkButton.Location = new System.Drawing.Point(121, 62);
+            this.OkButton.Location = new System.Drawing.Point(94, 56);
+            this.OkButton.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(109, 38);
+            this.OkButton.Size = new System.Drawing.Size(138, 32);
             this.OkButton.TabIndex = 1;
             this.OkButton.Text = "Ok";
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
-            // 
-            // button1
-            // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(271, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // QueryPasswordForm
             // 
             this.AcceptButton = this.OkButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.button1;
-            this.ClientSize = new System.Drawing.Size(349, 119);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(322, 104);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.textBox1);
+            this.MinimumSize = new System.Drawing.Size(338, 143);
             this.Name = "QueryPasswordForm";
             this.Text = "QueryPasswordForm";
             this.ResumeLayout(false);
@@ -84,6 +79,5 @@
         #endregion
         private System.Windows.Forms.Button OkButton;
         public System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
     }
 }
