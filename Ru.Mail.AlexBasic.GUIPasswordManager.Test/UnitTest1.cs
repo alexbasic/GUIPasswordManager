@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Ru.Mail.AlexBasic.GUIPasswordManagerю.Test
+namespace Ru.Mail.AlexBasic.GUIPasswordManager.Test
 {
     public class Tests
     {

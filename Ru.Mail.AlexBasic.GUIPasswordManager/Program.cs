@@ -17,7 +17,14 @@ namespace Ru.Mail.AlexBasic.GUIPasswordManager
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUIPasswordForm());
+
+            using (var context = new SqliteContext(dataSource: "data.db"))
+            {
+                context.WithTransaction(context => new FirstMigration(context).Up());
+
+                var secretsProvider = new SecretsProvider(context);
+                Application.Run(new GUIPasswordForm(secretsProvider));
+            }
         }
     }
 }

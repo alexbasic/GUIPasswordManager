@@ -72,7 +72,16 @@ namespace Ru.Mail.AlexBasic.GUIPasswordManager
             SendKeys.SendWait(value);
         }
 
+        //Вот это рабочий метод 100%
         public static IntPtr SetLastWindowForeground()
+        {
+            IntPtr lastWindowHandle = GetLastWindow();
+            SetForegroundWindow(lastWindowHandle);
+
+            return lastWindowHandle;
+        }
+
+        public static IntPtr GetLastWindow()
         {
             IntPtr lastWindowHandle = WinApi.GetWindow(Process.GetCurrentProcess().MainWindowHandle, (uint)WinApi.GetWindow_Cmd.GW_HWNDNEXT);
             while (true)
@@ -81,8 +90,6 @@ namespace Ru.Mail.AlexBasic.GUIPasswordManager
                 if (temp.Equals(IntPtr.Zero)) break;
                 lastWindowHandle = temp;
             }
-            SetForegroundWindow(lastWindowHandle);
-
             return lastWindowHandle;
         }
 
