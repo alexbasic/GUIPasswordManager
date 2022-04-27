@@ -6,9 +6,7 @@
 
 Установка
 ---------
-Для запуска нужен NET Core 3.1
-Скачать можно с официального сайта Microsoft
-https://dotnet.microsoft.com/en-us/download/dotnet/3.1
+Для запуска нужен NET Core 3.1. Скачать можно с официального сайта Microsoft https://dotnet.microsoft.com/en-us/download/dotnet/3.1
 
 Как пользоваться
 ----------------
