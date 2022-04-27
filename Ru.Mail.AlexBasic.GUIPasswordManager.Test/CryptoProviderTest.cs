@@ -6,7 +6,7 @@ namespace Ru.Mail.AlexBasic.GUIPasswordManager.Test
     public class CryptoProviderTest
     {
         [Test]
-        public void TheExampleOfProtection()
+        public void ShouldEncodeAndDecode()
         {
             var provider = new CryptoProvider();
 
@@ -14,9 +14,25 @@ namespace Ru.Mail.AlexBasic.GUIPasswordManager.Test
             var password = "somePassword";
 
             var encodedData = provider.Encode(stringForEncode, password);
-            provider.Decode();
+            var decodedData = provider.Decode(encodedData, password);
 
-            Assert.Pass();
+            Assert.AreEqual(stringForEncode, decodedData);
+        }
+
+        [Test]
+        public void ShouldThowExceptionOnWrongPassword()
+        {
+            var provider = new CryptoProvider();
+
+            var stringForEncode = 
+                "Hello world! Hello world! Hello world! Hello world! Hello world!";
+            var password = "somePassword";
+            var anotherPassword = "12345"; 
+
+            var encodedData = provider.Encode(stringForEncode, anotherPassword);
+
+            Assert.Throws<CryptoProviderException>(() => 
+                provider.Decode(encodedData, password));
         }
     }
 }

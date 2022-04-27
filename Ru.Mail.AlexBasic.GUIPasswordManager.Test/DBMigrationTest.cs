@@ -27,18 +27,21 @@ namespace Ru.Mail.AlexBasic.GUIPasswordManager.Test
                     "insert into SecretGroup (Name) values (@Name)", 
                     new { Name = "Group name" });
                 var secretId = context.ExecuteNonQuery(
-                    "insert into Secret (Name, Value, SecretGroupId) values (@Name, @Value, @SecretGroupId)", 
+                    "insert into Secret (Name, Value, SecretGroupId, Protected) values (@Name, @Value, @SecretGroupId, @Protected)", 
                     new { Name = "Name", 
                         Value = new byte[] {
                             (byte)'1', (byte)'2', (byte)'3', (byte)'4', (byte)'5' }, 
-                        SecretGroupId = groupId });
+                        SecretGroupId = groupId,
+                        Protected = 0
+                    });
 
                 var secretGroups = context.ExecuteQuery<SecretGroup>(
                     $"SELECT Name FROM SecretGroup;");
                 var secrets = context.ExecuteQuery<SecretGroup>(
                     $"SELECT Name FROM Secret;");
 
-                Assert.AreEqual("Group name", secretGroups.First().Name);
+                Assert.AreEqual("Default", secretGroups.First().Name);
+                Assert.AreEqual("Group name", secretGroups.Last().Name);
                 Assert.AreEqual("Name", secrets.First().Name);
 
                 context.WithTransaction(context => new FirstMigration(context).Down());
