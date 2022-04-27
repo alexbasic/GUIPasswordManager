@@ -17,12 +17,15 @@ namespace Ru.Mail.AlexBasic.GUIPasswordManager.Forms
 {
     public partial class GUIPasswordForm : Form
     {
+        private readonly string appVersion = "v"+typeof(GUIPasswordForm).Assembly.GetName().Version.ToString(3);
         private readonly MainManagerViewModel _viewModel;
         private readonly string _passwordStub;
 
         public GUIPasswordForm(ISecretsProvider secretsProvider)
         {
             InitializeComponent();
+
+            Text = $"GUI Password Manager {appVersion}";
 
             using (var textBox = new TextBox() { UseSystemPasswordChar = true })
             {
