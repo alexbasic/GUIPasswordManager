@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Ru.Mail.AlexBasic.GUIPasswordManager;
+using Ru.Mail.AlexBasic.GUIPasswordManager.Infrastructure.Db;
 using System;
 
 namespace Ru.Mail.AlexBasic.GUIPasswordManager.Test

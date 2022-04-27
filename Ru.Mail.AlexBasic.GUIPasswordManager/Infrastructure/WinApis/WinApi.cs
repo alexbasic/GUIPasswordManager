@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Ru.Mail.AlexBasic.GUIPasswordManager
+namespace Ru.Mail.AlexBasic.GUIPasswordManager.Infrastructure.WinApis
 {
     public static class WinApi
     {

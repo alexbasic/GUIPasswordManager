@@ -1,9 +1,10 @@
 ﻿using Microsoft.Data.Sqlite;
+using Ru.Mail.AlexBasic.GUIPasswordManager.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Ru.Mail.AlexBasic.GUIPasswordManager
+namespace Ru.Mail.AlexBasic.GUIPasswordManager.Infrastructure.Db
 {
     public class SqliteContext : ISqliteContext
     {

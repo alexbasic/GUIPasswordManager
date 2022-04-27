@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Ru.Mail.AlexBasic.GUIPasswordManager
+namespace Ru.Mail.AlexBasic.GUIPasswordManager.Infrastructure.Db
 {
     public interface ISqliteContext : IDisposable
     {

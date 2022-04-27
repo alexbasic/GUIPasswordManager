@@ -1,3 +1,6 @@
+using Ru.Mail.AlexBasic.GUIPasswordManager.Domain;
+using Ru.Mail.AlexBasic.GUIPasswordManager.Forms;
+using Ru.Mail.AlexBasic.GUIPasswordManager.Infrastructure.Db;
 using System;
 using System.Collections.Generic;
 using System.Linq;

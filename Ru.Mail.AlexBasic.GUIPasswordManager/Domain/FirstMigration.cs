@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Ru.Mail.AlexBasic.GUIPasswordManager.Infrastructure.Db;
+using System;
 
-namespace Ru.Mail.AlexBasic.GUIPasswordManager
+namespace Ru.Mail.AlexBasic.GUIPasswordManager.Domain
 {
     public class FirstMigration : DBLiteMigration
     {

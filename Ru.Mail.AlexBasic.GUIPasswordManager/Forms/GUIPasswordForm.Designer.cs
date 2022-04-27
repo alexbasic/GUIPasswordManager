@@ -1,4 +1,4 @@
-﻿namespace Ru.Mail.AlexBasic.GUIPasswordManager
+﻿namespace Ru.Mail.AlexBasic.GUIPasswordManager.Forms
 {
     partial class GUIPasswordForm
     {
@@ -44,7 +44,7 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new Ru.Mail.AlexBasic.GUIPasswordManager.ListViewAdd();
+            this.listView1 = new Ru.Mail.AlexBasic.GUIPasswordManager.Controls.ListViewAdd();
             this.nameColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.valueColumnHeader = new System.Windows.Forms.ColumnHeader();
             this.commentColumnHeader = new System.Windows.Forms.ColumnHeader();
@@ -223,7 +223,7 @@
         private System.Windows.Forms.ToolStripMenuItem addSecretToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private Ru.Mail.AlexBasic.GUIPasswordManager.ListViewAdd listView1;
+        private Ru.Mail.AlexBasic.GUIPasswordManager.Controls.ListViewAdd listView1;
         private System.Windows.Forms.ColumnHeader nameColumnHeader;
         private System.Windows.Forms.ColumnHeader valueColumnHeader;
         private System.Windows.Forms.ColumnHeader commentColumnHeader;

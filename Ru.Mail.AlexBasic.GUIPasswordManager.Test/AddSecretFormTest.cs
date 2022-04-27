@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Ru.Mail.AlexBasic.GUIPasswordManager;
+using Ru.Mail.AlexBasic.GUIPasswordManager.Forms;
 using System.Collections.Generic;
 using System.Windows.Forms;
 

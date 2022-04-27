@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Ru.Mail.AlexBasic.GUIPasswordManager
+namespace Ru.Mail.AlexBasic.GUIPasswordManager.Infrastructure.Crypto
 {
     public class CryptoProvider
     {
@@ -22,9 +22,12 @@ namespace Ru.Mail.AlexBasic.GUIPasswordManager
                 return Encoding.UTF8.GetString(ProtectedData.Unprotect(data,
                     entropy, DataProtectionScope.CurrentUser));
             }
-            catch (CryptographicException e)
+            catch (Exception ex)
             {
-                throw new CryptoProviderException(e);
+                if (typeof(CryptographicException).IsAssignableFrom(ex.GetType()))
+                    throw new CryptoProviderException(ex);
+                else
+                    throw ex;
             }
         }
 
@@ -33,10 +36,5 @@ namespace Ru.Mail.AlexBasic.GUIPasswordManager
             var md5 = MD5.Create();
             return md5.ComputeHash(Encoding.UTF8.GetBytes(password));
         }
-    }
-
-    public class CryptoProviderException : Exception
-    {
-        public CryptoProviderException(Exception ex) : base("Не возможно расшифровать. Ошибка: " + ex.Message, ex) { }
     }
 }

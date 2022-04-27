@@ -1,4 +1,7 @@
 ﻿using Microsoft.Data.Sqlite;
+using Ru.Mail.AlexBasic.GUIPasswordManager.Controls;
+using Ru.Mail.AlexBasic.GUIPasswordManager.Domain;
+using Ru.Mail.AlexBasic.GUIPasswordManager.ViewModels;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -10,7 +13,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ru.Mail.AlexBasic.GUIPasswordManager
+namespace Ru.Mail.AlexBasic.GUIPasswordManager.Forms
 {
     public partial class GUIPasswordForm : Form
     {

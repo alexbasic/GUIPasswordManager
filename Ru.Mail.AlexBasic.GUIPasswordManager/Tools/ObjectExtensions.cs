@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Ru.Mail.AlexBasic.GUIPasswordManager
+namespace Ru.Mail.AlexBasic.GUIPasswordManager.Tools
 {
     public static class ObjectExtensions
     {

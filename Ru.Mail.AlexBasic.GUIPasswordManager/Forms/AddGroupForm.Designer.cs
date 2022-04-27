@@ -1,4 +1,4 @@
-﻿namespace Ru.Mail.AlexBasic.GUIPasswordManager
+﻿namespace Ru.Mail.AlexBasic.GUIPasswordManager.Forms
 {
     partial class AddGroupForm
     {

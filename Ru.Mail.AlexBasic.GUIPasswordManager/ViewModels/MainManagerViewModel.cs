@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Ru.Mail.AlexBasic.GUIPasswordManager.Domain;
+using Ru.Mail.AlexBasic.GUIPasswordManager.Infrastructure.Crypto;
+using Ru.Mail.AlexBasic.GUIPasswordManager.Infrastructure.WinApis;
+using Ru.Mail.AlexBasic.GUIPasswordManager.Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Ru.Mail.AlexBasic.GUIPasswordManager
+namespace Ru.Mail.AlexBasic.GUIPasswordManager.ViewModels
 {
     public class MainManagerViewModel
     {

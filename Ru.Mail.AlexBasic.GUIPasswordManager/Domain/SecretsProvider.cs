@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Ru.Mail.AlexBasic.GUIPasswordManager.Infrastructure.Db;
+using Ru.Mail.AlexBasic.GUIPasswordManager.Model;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
-namespace Ru.Mail.AlexBasic.GUIPasswordManager
+namespace Ru.Mail.AlexBasic.GUIPasswordManager.Domain
 {
     public class SecretsProvider : ISecretsProvider
     {

@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Ru.Mail.AlexBasic.GUIPasswordManager.Tools;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ru.Mail.AlexBasic.GUIPasswordManager
+namespace Ru.Mail.AlexBasic.GUIPasswordManager.Infrastructure.Db
 {
     internal static class SqliteTools
     {
